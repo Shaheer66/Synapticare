@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verify your code and join the trusted medical community.">
+  <meta name="author" content="MUARSZ Tech Solutions">
+  <title>Patient Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/patient_home.css') }}">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <img src="../static/images/synapticare.png" alt="Synapticare Logo" class="logo" />
+    <ul class="nav-links">
+      <li><a href="{{ url_for('patient_home') }}">Home</a></li>
+      <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+      
+    </ul>
+    <img class="profile" src="../static/images/profile.png" alt="Profile">
+  </nav>
+
+  <section class="welcome-section">
+    <h1>Welcome Back, [Patient]!</h1>
+    <h2>How can we assist you today?</h2>
+
+    <div class="modules">
+      <!-- Medicine Module -->
+      <div class="module" onclick="gotoMed()">
+        <img src="../static/images/medicine.png" alt="Medicine Icon">
+        <h3>Medicine Alternatives</h3>
+        <p>Find affordable and effective alternatives to your prescribed medicines.</p>
+      </div>
+
+      <!-- Symptom Input Module -->
+      <div class="module" onclick="gotoSym()">
+        <img src="../static/images/symptom.png" alt="Symptoms Icon">
+        <h3>Symptom Input</h3>
+        <p>Enter your symptoms to get a system-predicted diagnosis.</p>
+      </div>
+
+      <!-- Skin Disease Module -->
+      <div class="module" onclick="gotoSkin()">
+        <img src="../static/images/skin.png" alt="Skin Icon">
+        <h3>Skin Disease Prediction</h3>
+        <p>Upload an image of your skin condition for a prediction.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="footer">
+    <div class="footer-container">
+      <!-- Logo and Description -->
+      <div class="footer-logo">
+        <img src="../static/images/synapticare.png" alt="SynapticCare Logo" class="logo-img" />
+        <p class="footer-description">
+          Lorem ipsum dolor sit amet consectetur. In diam nisl massa diam orci.
+        </p>
+      </div>
+
+      <!-- Links: Product and Remaining -->
+      <div class="footer-links">
+        <!-- Product Links -->
+        <div class="link-column">
+          <h4 class="link-heading">Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Updates</a></li>
+          </ul>
+        </div>
+
+        <!-- Remaining Links -->
+        <div class="link-column">
+          <h4 class="link-heading">Remaining</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Help Centre</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Newsletter Subscription -->
+      <div class="newsletter">
+        <h4 class="newsletter-heading">Newsletter</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="example@synapticare.com" class="newsletter-input" />
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© 2024, SC. All rights reserved.</p>
+    </div>
+  </section>
+  <script>
+    function gotoMed(){
+      window.location.href = "{{ url_for('chatbot') }}"
+    }
+    function gotoSym(){
+      window.location.href = "{{ url_for('symptoms') }}"
+    }
+    function gotoSkin(){
+      window.location.href = "{{url_for('skin')}}"
+    }
+  </script>
+</body>

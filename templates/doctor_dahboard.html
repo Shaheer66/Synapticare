@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requests</title>
+  <link rel="stylesheet"href="{{ url_for('static', filename='css/doctor_dashboard.css') }}">
+</head>
+<body>
+
+  <main class="requests-section">
+    <h2 class="section-title">Requests</h2>
+    <table class="requests-table">
+      <thead>
+        <tr>
+          <th>Patient</th>
+          <th>Disease Predicted</th>
+          <th>History</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="patient-info">
+              <img src="../static/images/ali.png" alt="Mr. Ali" class="patient-img">
+              <div>
+                <p class="patient-name">Mr. Ali</p>
+                <p class="patient-id">#DOC1254</p>
+              </div>
+            </div>
+          </td>
+          <td>Diabetes</td>
+          <td><button class="view-btn" data-name="Mr. Ali" data-disease="Diabetes">View</button></td>
+          <td>Oct 17, 2024</td>
+          <td><span class="status done">Done</span></td>
+          <td>
+            <img src="../static/images/action.png" alt="Action-Ali" class="action-img action-ali">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="patient-info">
+              <img src="../static/images/ayesha.png" alt="Mr. Ayesha" class="patient-img">
+              <div>
+                <p class="patient-name">Mr. Ayesha</p>
+                <p class="patient-id">#DOC1254</p>
+              </div>
+            </div>
+          </td>
+          <td>Eczema</td>
+          <td><button class="view-btn" data-name="Mr. Ayesha" data-disease="Eczema">View</button></td>
+          <td>Oct 17, 2024</td>
+          <td><span class="status pending">Pending</span></td>
+          <td>
+            <img src="../static/images/action.png" alt="Action-Ayesha" class="action-img">
+          </td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Modal -->
+  <div id="view-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Patient Details</h3>
+      <p id="patient-details"></p>
+    </div>
+  </div>
+
+  <!-- Overlay Section -->
+  <div id="ali-overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <button class="close-overlay-btn">&times;</button>
+      <div class="input-section">
+        <div>
+          <h3>Patients Symptom Input</h3>
+          <textarea readonly>I have swear pain in my throat and also headache in half head</textarea>
+        </div>
+        <div>
+          <h3>SynaptiCare’s Response</h3>
+          <textarea readonly>Pneumonia + Fever</textarea>
+        </div>
+      </div>
+      <div>
+        <h3>Doctor’s Response</h3>
+        <textarea placeholder="Kindly review SynaptiCare's predicted response"></textarea>
+      </div>
+      <button class="submit-btn">Submit</button>
+    </div>
+  </div>
+
+  <!-- Modal for Ayesha -->
+<div id="ayesha-overlay" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-overlay-btn">&times;</span>
+    <h3>Patient's Skin Image</h3>
+    <img src="../static/images/eczama.png" alt="Eczema" class="patient-skin-image">
+    <div class="response-container">
+      <div class="response-box">
+        <h4>SynaptiCare's Response</h4>
+        <textarea readonly>Eczema</textarea>
+      </div>
+      <div class="response-box">
+        <h4>Doctor's Response</h4>
+        <p>Kindly review SynaptiCare's predicted response</p>
+        <textarea placeholder="Input"></textarea>
+      </div>
+    </div>
+    <button class="submit-btn">Submit</button>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          // Select action images for Ali and Ayesha
+          const aliAction = document.querySelector('.action-ali'); // Ali's specific action image
+          const ayeshaAction = document.querySelector('.action-img:not(.action-ali)'); // Ayesha's action image (not Ali's)
+          
+          // Select overlays for Ali and Ayesha
+          const aliOverlay = document.getElementById('ali-overlay');
+          const ayeshaOverlay = document.getElementById('ayesha-overlay');
+          
+          // Select close buttons and submit buttons
+          const closeOverlayBtns = document.querySelectorAll('.close-overlay-btn');
+          const submitBtns = document.querySelectorAll('.submit-btn');
+          
+          // Show Ali's overlay
+          aliAction.addEventListener('click', () => {
+            aliOverlay.classList.remove('hidden');
+          });
+        
+          // Show Ayesha's overlay
+          ayeshaAction.addEventListener('click', () => {
+            ayeshaOverlay.classList.remove('hidden');
+          });
+        
+          // Close overlays on close button click
+          closeOverlayBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+              btn.closest('.overlay, .modal').classList.add('hidden');
+            });
+          });
+        
+          // Submit button functionality
+          submitBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+              const modal = btn.closest('.overlay, .modal');
+              alert('Response submitted successfully!');
+              modal.classList.add('hidden');
+            });
+          });
+        });
+         
+                
+      </script>
+    </body>
+    </html>
+    
+
+ 
+</body>
+</html>

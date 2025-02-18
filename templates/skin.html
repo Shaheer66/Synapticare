@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verify your code and join the trusted medical community.">
+    <meta name="author" content="MUARSZ Tech Solutions">
+    <title>Skin_Diagnosis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='css/skin.css') }}">
+    
+</head>
+<body>
+    
+        <!-- Navbar -->
+        <nav class="navbar">
+          <img src="../static/images/synapticare.png" alt="Synapticare Logo" class="logo" />
+          <ul class="nav-links">
+            <li><a href="{{ url_for('patient_home') }}">Home</a></li>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            
+          </ul>
+          <img class="profile" src="../static/images/profile.png" alt="Profile">
+        </nav>
+        
+        <!-- Sidebar Section -->
+  <aside class="sidebar" id="sidebar">
+    <!-- Logo at the top -->
+    <div class="sidebar-logo">
+      <img src="../static/images/synapticare.png" alt="Synapticare Logo">
+    </div>
+
+    <!-- Begin New Chat Section -->
+    <button class="new-chat-btn">
+      Begin a New Chat <span class="plus-icon">+</span>
+    </button>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <input type="text" placeholder="Search" />
+    </div>
+
+    <!-- Recent Chats -->
+    <div class="recent-chats">
+      <h3>Recent Chats</h3>
+      <ul>
+        <li class="chat-item">
+          <span class="chat-icon">💬</span>
+          Headache
+          <span class="chat-options">...</span>
+        </li>
+        <li class="chat-item">
+          <span class="chat-icon">💬</span>
+          Stomache
+          <span class="chat-options">...</span>
+        </li>
+        <li class="chat-item">
+          <span class="chat-icon">💬</span>
+          Pain in leg
+          <span class="chat-options">...</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- User Profile Section -->
+    <div class="user-profile">
+        <i class="fas fa-user-circle"></i> <!-- User profile icon -->
+        <i class="fas fa-cog"></i>         <!-- Settings icon -->
+      </div>
+      
+  </aside>
+
+  <!-- Sidebar Toggle Button -->
+  <button class="sidebar-toggle" id="toggleSidebar">
+    ≡
+  </button>
+   
+  <main class="skin-checker">
+    <!-- Main Heading -->
+    <h1 class="main-heading">
+      Skin Disease <span class="highlight">Detection</span> 
+    </h1>
+    
+    <!-- Sub-heading -->
+    <p class="subheading">
+     Upload a clear image of affected area to </br> with diagnosis </br>
+     Kindly make sure it will be in the format </br> .png or jpeg </br>
+    </p>
+  </main>
+
+
+  <div class="upload-container">
+    <!-- Media Upload Section -->
+    <div class="upload-box">
+      <div class="upload-title">
+        Media Upload
+      </div>
+      <p class="upload-info">
+        Add your documents here, and you must upload up to 5 files minimum for better diagnosis.
+      </p>
+  
+      <div class="upload-box-dotted">
+        <!-- Image Demo for Upload -->
+        <img src="../static/images/file.png" alt="File upload demo" class="upload-image">
+        
+        <!-- Drag and Drop Instruction -->
+        <p class="drag-instruction">Drag your file(s) to start uploading</p>
+  
+        <!-- Browse Files Button -->
+        <button class="browse-btn">
+          Browse Files
+          <input type="file" multiple id="file-upload" class="file-upload" />
+        </button>
+  
+        <!-- Supported Formats -->
+        <p class="supported-formats">Only supports .jpg, .png, .jpeg files</p>
+      </div>
+  
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button class="cancel-btn" onclick="gotoHome()">Cancel</button>
+        <button class="next-btn" id="next-btn">Next</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Overlay for Next Button -->
+  <div class="overlay hidden" id="overlay">
+    <div class="overlay-content">
+      <img src="../static/images/synapticare.png" alt="Synapticare Logo" class="overlay-logo">
+      <input type="text" placeholder="Is there anything you want to tell related to this?" class="overlay-input" />
+      <button class="submit-button" id="submit-Btn" onclick="gotoSkin2()">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+
+     
+    </div>
+  </div>
+  
+
+  <section class="footer">
+    <div class="footer-container">
+      <!-- Logo and Description -->
+      <div class="footer-logo">
+        <img src="../static/images/synapticare.png" alt="SynapticCare Logo" class="logo-img" />
+        <p class="footer-description">
+          Lorem ipsum dolor sit amet consectetur. In diam nisl massa diam orci.
+        </p>
+      </div>
+  
+      <!-- Links: Product and Remaining -->
+      <div class="footer-links">
+        <!-- Product Links -->
+        <div class="link-column">
+          <h4 class="link-heading">Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Updates</a></li>
+          </ul>
+        </div>
+  
+        <!-- Remaining Links -->
+        <div class="link-column">
+          <h4 class="link-heading">Remaining</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Help Centre</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Newsletter Subscription -->
+      <div class="newsletter">
+        <h4 class="newsletter-heading">Newsletter</h4>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            placeholder="example@synapticare.com"
+            class="newsletter-input"
+          />
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© 2024, SC. All rights reserved.</p>
+    </div>
+</section>
+<script>
+  function gotoHome(){
+    window.location.href="{{url_for('patient_home')}}"
+  }
+  function gotoSkin2(){
+    window.location.href="{{url_for('skin2')}}"
+  }
+</script>
+</body>
+<script src="{{ url_for('static', filename='js/skin.js') }}"></script>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verify your code and join the trusted medical community.">
+    <meta name="author" content="MUARSZ Tech Solutions">
+    <title>Medicine Alternatives</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="medicine.css">
+    <script src="medicine.js"></script>
+</head>
+<body>
+    
+        <!-- Navbar -->
+        <nav class="navbar">
+          <img src="./images/synapticare.png" alt="Synapticare Logo" class="logo" />
+          <ul class="nav-links">
+            <li><a href="{{ url_for('patient_home') }}">Home</a></li>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            
+          </ul>
+          <img class="profile" src="./images/profile.png" alt="Profile">
+        </nav>
+
+
+        <div class="process-bar">
+            <img src="./images/porces_bar.png" alt="Process Bar">
+          </div>
+        
+          <main class="medicine-alternatives">
+            <!-- Main Heading -->
+            <h1 class="main-heading">
+              Medicine <span class="highlight">Alternatives</span>
+            </h1>
+            <img class="rough-line" src="./images/Underline_04.png" alt="Decorative Line">
+        
+            <!-- Subheading -->
+            <p class="subheading">
+              Please answer a few questions to help us recommend safe alternatives tailored to your health.
+            </p>
+        
+            <!-- Questions Section -->
+            <div class="questions-section">
+              <div class="question">
+                <h3>Please specify the medications you are allergic to.</h3>
+                <p>Write NO, if you have no specific allergy</p>
+                <input type="text" placeholder="Your Answer">
+                <small class="error-message" hidden>This field is required</small>
+                
+              </div>
+              <div class="question">
+                <h3>Do you have any chronic or long-term health conditions?</h3>
+                <p>Write NO, if you have no specific condition</p>
+                <input type="text" placeholder="Your Answer">
+                <small class="error-message" hidden>This field is required</small>
+              </div>
+              <div class="question">
+                <h3>Are you currently taking any other prescribed or over-the-counter medications?</h3>
+                <p>Write NO, if you aren’t</p>
+                <input type="text" placeholder="Your Answer">
+                <small class="error-message" hidden>This field is required</small>
+              </div>
+              <div class="question">
+                <h3>Do you currently smoke or consume alcohol regularly?</h3>
+                <p>Write NO, if you don’t</p>
+                <input type="text" placeholder="Your Answer">
+                <small class="error-message" hidden>This field is required</small>
+              </div>
+              <div class="question">
+                <h3>Have you experienced any adverse reactions to similar medications in the past?</h3>
+                <p>Write NO, if you haven’t</p>
+                <input type="text" placeholder="Your Answer">
+                <small class="error-message" hidden>This field is required</small>
+              </div>
+              <div class="question">
+                <h3>Are you currently pregnant, breastfeeding, or planning to become pregnant soon?</h3>
+                <p>Write NO, if you aren’t</p>
+                <input type="text" placeholder="Your Answer">
+                <small class="error-message" hidden>This field is required</small>
+              </div>
+            </div>
+        
+            <!-- Next Button -->
+            <div class="next-button">
+              <button>Next</button>
+            </div>
+          </main>
+
+          
+        <section class="footer">
+            <div class="footer-container">
+              <!-- Logo and Description -->
+              <div class="footer-logo">
+                <img src="./images/synapticare.png" alt="SynapticCare Logo" class="logo-img" />
+                <p class="footer-description">
+                  Lorem ipsum dolor sit amet consectetur. In diam nisl massa diam orci.
+                </p>
+              </div>
+          
+              <!-- Links: Product and Remaining -->
+              <div class="footer-links">
+                <!-- Product Links -->
+                <div class="link-column">
+                  <h4 class="link-heading">Product</h4>
+                  <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Updates</a></li>
+                  </ul>
+                </div>
+          
+                <!-- Remaining Links -->
+                <div class="link-column">
+                  <h4 class="link-heading">Remaining</h4>
+                  <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Support</a></li>
+                  </ul>
+                </div>
+              </div>
+          
+              <!-- Newsletter Subscription -->
+              <div class="newsletter">
+                <h4 class="newsletter-heading">Newsletter</h4>
+                <form class="newsletter-form">
+                  <input
+                    type="email"
+                    placeholder="example@synapticare.com"
+                    class="newsletter-input"
+                  />
+                  <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+              </div>
+            </div>
+
+          
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+              <p>© 2024, SC. All rights reserved.</p>
+            </div>
+        </section>
+    </body>       

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verify your code and join the trusted medical community.">
+    <meta name="author" content="MUARSZ Tech Solutions">
+    <title>Medicine Alternatives</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/med_chatbot.css') }}">
+   
+</head>
+<body>
+    
+        <!-- Navbar -->
+        <nav class="navbar">
+          <img src="../static/images/synapticare.png" alt="Synapticare Logo" class="logo" />
+          <ul class="nav-links">
+            <li><a href="{{ url_for('patient_home') }}">Home</a></li>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            
+          </ul>
+          <img class="profile" src="../static/images/profile.png" alt="Profile">
+        </nav>
+        <main class="medicine-alternatives">
+            <!-- Main Heading -->
+            <h1 class="main-heading">
+              Medicine <span class="highlight">Alternatives</span>
+            </h1>
+            <img class="rough-line" src="../static/images/Underline_04.png" alt="Decorative Line">
+          
+            <!-- Decorative Chatbot Star -->
+            <img class="chatbot-star" src="../static/images/chatbot_star.png" alt="Chatbot Decorative Star">
+          
+            <!-- Bold Paragraph -->
+            <p class="bold-text">We're here to assist you</p>
+          
+            <!-- Light Paragraph -->
+            <p class="light-text">Suggestions on what to ask US</p>
+          
+            <!-- Suggestion Boxes -->
+            <div class="suggestion-boxes">
+              <div class="box">Ibuprofen</div>
+              <div class="box">Panadol</div>
+              <div class="box">Norvasc</div>
+            </div>
+          
+            <!-- Input Field -->
+            <div class="input-wrapper">
+              <input type="text" placeholder="Write your medicine name here" class="medicine-input">
+              <button class="submit-btn">➤</button>
+            </div>
+          </main>
+            
+
+          <section class="footer">
+            <div class="footer-container">
+              <!-- Logo and Description -->
+              <div class="footer-logo">
+                <img src="../static/images/synapticare.png" alt="SynapticCare Logo" class="logo-img" />
+                <p class="footer-description">
+                  Lorem ipsum dolor sit amet consectetur. In diam nisl massa diam orci.
+                </p>
+              </div>
+          
+              <!-- Links: Product and Remaining -->
+              <div class="footer-links">
+                <!-- Product Links -->
+                <div class="link-column">
+                  <h4 class="link-heading">Product</h4>
+                  <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Updates</a></li>
+                  </ul>
+                </div>
+          
+                <!-- Remaining Links -->
+                <div class="link-column">
+                  <h4 class="link-heading">Remaining</h4>
+                  <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Support</a></li>
+                  </ul>
+                </div>
+              </div>
+          
+              <!-- Newsletter Subscription -->
+              <div class="newsletter">
+                <h4 class="newsletter-heading">Newsletter</h4>
+                <form class="newsletter-form">
+                  <input
+                    type="email"
+                    placeholder="example@synapticare.com"
+                    class="newsletter-input"
+                  />
+                  <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+              </div>
+            </div>
+
+          
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+              <p>© 2024, SC. All rights reserved.</p>
+            </div>
+        </section>
+
+        <script src="{{ url_for('static', filename='js/medicine.js') }}"></script>
+
+</body>            

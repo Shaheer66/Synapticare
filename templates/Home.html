@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="home-container">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <img src="../static/images/synapticare.png" alt="Synapticare Logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+     <!-- <button class="login-btn" onclick="redirectToLogin()">Login</button> -->
+     <button onclick="window.location.href='{{ url_for('login') }}'" class="login-btn">Login</button>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+      <img src="../static/images/doodle.png" alt="Decorative Wave" class="decorative-wave" />
+      <div class="hero-content">
+        <h1 class="hero-title">Reliable Healthcare <br /> at Your Fingertips</h1>
+        <p class="hero-subtitle">
+          Easily access diagnoses, find medicine <br /> alternatives, and more—all reviewed by experts.
+        </p>
+        <button class="cta-btn" onclick="redirectToLogin()">Login</button>
+      </div>
+      <!--
+      <div class="dotted-arrow">
+      <img src="./images/arrow.png" alt="Dotted Arrow" class="dotted-arrow" />
+    </div>
+    -->    
+    </header>
+
+   <!-- Main Content -->
+<main>
+  <!-- Who We Serve Section -->
+  <section class="serve-section">
+    <!-- Section Title -->
+    <h2 class="section-title">Who We Serve</h2>
+
+
+  <!-- Card Container -->
+  <div class="card-container">
+    <!-- Card 1: Doctors -->
+    <div class="card-wrapper">
+      <div class="card">
+        <h3 class="card-title">Doctors</h3>
+        <p class="card-text">
+          Review and approve diagnoses, recommend medications, and stay connected with patient cases.
+        </p>
+        <button class="card-btn">Learn More →</button>
+      </div>
+      <img src="../static/images/doctor.png" alt="Doctor" class="card-img" />
+    </div>
+
+    <!-- Card 2: Patients -->
+    <div class="card-wrapper">
+      <div class="card">
+        <h3 class="card-title">Patients</h3>
+        <p class="card-text">
+          Search for affordable medicine alternatives, receive symptom-based diagnoses, and upload images for skin disease predictions.
+        </p>
+        <button class="card-btn">Learn More →</button>
+      </div>
+      <img src="../static/images/patient.png" alt="Patient" class="card-img" />
+    </div>
+  </div>
+    </div>
+        <!-- Arrow Container -->
+      
+      </section>
+    </main>
+  </div>
+  
+  <div class="testimonial-section">
+    <h2 class="testimonial-heading">Testimonials</h2>
+  
+    <!-- Testimonial Container -->
+    <div class="testimonial-container">
+      <!-- Decorative Elements -->
+      <img src="../static/images/ring.png" alt="Ring" class="decorative-image ring" />
+      <img src="../static/images/circle.png" alt="Circle" class="decorative-image circle" />
+      <img src="../static/images/cube.png" alt="Cube" class="decorative-image cube" />
+  
+      <!-- Main Testimonial Content -->
+      <div class="testimonial-content">
+        <blockquote class="testimonial-text">
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's..."
+        </blockquote>
+        <div class="testimonial-author">
+          <img src="../static/images/doctor.png" alt="John Smith" class="author-image" />
+          <div>
+            <p class="author-name">John Smith</p>
+            <p class="author-role">Cystic Acne Patient</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Pagination Dots -->
+    <div class="pagination-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+  
+  <section class="footer">
+    <div class="footer-container">
+      <!-- Logo and Description -->
+      <div class="footer-logo">
+        <img src="../static/images/synapticare.png" alt="SynapticCare Logo" class="logo-img" />
+        <p class="footer-description">
+          Lorem ipsum dolor sit amet consectetur. In diam nisl massa diam orci.
+        </p>
+      </div>
+  
+      <!-- Links: Product and Remaining -->
+      <div class="footer-links">
+        <!-- Product Links -->
+        <div class="link-column">
+          <h4 class="link-heading">Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Updates</a></li>
+          </ul>
+        </div>
+  
+        <!-- Remaining Links -->
+        <div class="link-column">
+          <h4 class="link-heading">Remaining</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Help Centre</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Newsletter Subscription -->
+      <div class="newsletter">
+        <h4 class="newsletter-heading">Newsletter</h4>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            placeholder="example@synapticare.com"
+            class="newsletter-input"
+          />
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© 2024, SC. All rights reserved.</p>
+    </div>
+  </section>
+  <script>
+    // JavaScript function to handle redirection
+    function redirectToLogin() {
+        window.location.href = "{{ url_for('login') }}"; // Redirect to the login route
+    }
+</script>
+
+  
+</body>
+</html>

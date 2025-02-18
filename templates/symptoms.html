@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verify your code and join the trusted medical community.">
+    <meta name="author" content="MUARSZ Tech Solutions">
+    <title>Symptoms_Diagnosis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='css/symptoms.css') }}">
+    
+   
+</head>
+<body>
+    
+        <!-- Navbar -->
+        <nav class="navbar">
+          <img src="../static/images/synapticare.png" alt="Synapticare Logo" class="logo" />
+          <ul class="nav-links">
+            <li><a href="{{ url_for('patient_home') }}">Home</a></li>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            
+          </ul>
+          <img class="profile" src="../static/images//profile.png" alt="Profile">
+        </nav>
+        
+        <!-- Sidebar Section -->
+  <aside class="sidebar" id="sidebar">
+ 
+    <div class="sidebar-logo">
+      <img src="../static/images/synapticare.png" alt="Synapticare Logo">
+    </div>
+
+    <!-- Begin New Chat Section -->
+    <button class="new-chat-btn">
+      Begin a New Chat <span class="plus-icon">+</span>
+    </button>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <input type="text" placeholder="Search" />
+    </div>
+
+    <!-- Recent Chats -->
+    <div class="recent-chats">
+      <h3>Recent Chats</h3>
+      <ul>
+        <li class="chat-item">
+          <span class="chat-icon">💬</span>
+          Headache
+          <span class="chat-options">...</span>
+        </li>
+        <li class="chat-item">
+          <span class="chat-icon">💬</span>
+          Stomache
+          <span class="chat-options">...</span>
+        </li>
+        <li class="chat-item">
+          <span class="chat-icon">💬</span>
+          Pain in leg
+          <span class="chat-options">...</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- User Profile Section -->
+    <div class="user-profile">
+        <i class="fas fa-user-circle"></i> <!-- User profile icon -->
+        <i class="fas fa-cog"></i>         <!-- Settings icon -->
+      </div>
+      
+  </aside>
+
+  <!-- Sidebar Toggle Button -->
+  <button class="sidebar-toggle" id="toggleSidebar">
+    ≡
+  </button>
+   
+  <main class="symptom-checker">
+    <!-- Main Heading -->
+    <h1 class="main-heading">
+      How can we <span class="highlight">assist</span> you today?
+    </h1>
+    
+    <!-- Sub-heading -->
+    <p class="subheading">
+      Hello! I’m here to help you describe your symptoms so we can provide initial insights. 
+      Please type in any symptoms or concerns you’re experiencing.
+    </p>
+
+    <!-- Symptom Cards -->
+    <div class="symptom-cards">
+      <div class="symptom-card">
+        <h2>Headache</h2>
+        <p>idiid</p>
+        <a href="#dummy" class="go-icon"><i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="symptom-card">
+        <h2>Fever</h2>
+        <a href="#dummy" class="go-icon"><i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="symptom-card">
+        <h2>Pneumonia</h2>
+        <a href="#dummy" class="go-icon"><i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Input Section -->
+    <div class="input-section">
+      <a href="#upload" class="upload-icon"><i class="fas fa-link"></i></a>
+      <input type="text" placeholder="Type your symptoms here">
+      <button class="submit-button" id="submit-button" onclick="gotoSymptoms2()">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </main>
+  <section class="footer">
+    <div class="footer-container">
+      <!-- Logo and Description -->
+      <div class="footer-logo">
+        <img src="../static/images/synapticare.png" alt="SynapticCare Logo" class="logo-img" />
+        <p class="footer-description">
+          Lorem ipsum dolor sit amet consectetur. In diam nisl massa diam orci.
+        </p>
+      </div>
+  
+      <!-- Links: Product and Remaining -->
+      <div class="footer-links">
+        <!-- Product Links -->
+        <div class="link-column">
+          <h4 class="link-heading">Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Updates</a></li>
+          </ul>
+        </div>
+  
+        <!-- Remaining Links -->
+        <div class="link-column">
+          <h4 class="link-heading">Remaining</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Help Centre</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Newsletter Subscription -->
+      <div class="newsletter">
+        <h4 class="newsletter-heading">Newsletter</h4>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            placeholder="example@synapticare.com"
+            class="newsletter-input"
+          />
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© 2024, SC. All rights reserved.</p>
+    </div>
+</section>
+<script>
+  function gotoSymptoms2(){
+    window.location.href="{{url_for('symptoms_2')}}"
+  }
+</script>
+</body>
+<script src="{{ url_for('static', filename='js/symptoms.js') }}"></script>
+</html>

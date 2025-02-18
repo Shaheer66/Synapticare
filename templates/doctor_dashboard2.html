@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../static/css/dashboard_2.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+</head>
+<body>
+  <div class="dashboard">
+    <header class="dashboard-header">
+      <h1>Good Morning <span class="highlight">Dr. [name]!</span></h1>
+      <div class="header-icons">
+        <button class="icon-button">🔔</button>
+        <button class="icon-button profile-icon">👤</button>
+      </div>
+    </header>
+
+    <section class="overview-section">
+      <div class="overview-card">
+        <p class="title">Points</p>
+        <h2>2,342</h2>
+        <p class="growth">+ 201</p>
+      </div>
+      <div class="overview-card">
+        <p class="title">New Symptoms Patient</p>
+        <h2>1,925</h2>
+        <p class="growth">+ 201</p>
+      </div>
+      <div class="overview-card">
+        <p class="title">New Skin Patient</p>
+        <h2>1,925</h2>
+        <p class="growth">+ 201</p>
+      </div>
+      <div class="overview-card">
+        <p class="title">New Prescription</p>
+        <h2>153</h2>
+        <p class="growth">+ 201</p>
+      </div>
+    </section>
+
+    <section class="stats-section">
+        <!-- Donut Chart Section -->
+        <div class="chart-card">
+          <header>
+            <h3>Patient Statistics</h3>
+            <select>
+              <option>This Week</option>
+              <option>Last Week</option>
+            </select>
+          </header>
+          <div>
+            <canvas id="donut-chart" width="400" height="400"></canvas>
+          </div>
+          <div class="chart-legend">
+            <p><span class="dot symptoms"></span> Symptoms: 38.82%</p>
+            <p><span class="dot skin"></span> Skin Image: 37.18%</p>
+            <p><span class="dot others"></span> Others: 24.09%</p>
+          </div>
+        </div>
+      
+        <!-- Bar Chart Section -->
+        <div class="chart-card">
+          <header>
+            <h3>Money Earned</h3>
+            <select>
+              <option>This Week</option>
+              <option>Last Week</option>
+            </select>
+          </header>
+          <div>
+            <canvas id="bar-chart" width="400" height="400"></canvas>
+          </div>
+        </div>
+      </section>
+      
+
+    <footer class="dashboard-footer">
+      <a href="#" class="view-all">View All</a>
+    </footer>
+  </div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initialize the Donut Chart
+        const donutCtx = document.getElementById('donut-chart').getContext('2d');
+        new Chart(donutCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Symptoms', 'Skin Image', 'Others'],
+            datasets: [
+              {
+                data: [38.82, 37.18, 24.09],
+                backgroundColor: ['#4caf50', '#2196f3', '#ff9800'], // Colors for the segments
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            plugins: {
+              legend: {
+                display: false, // Hides Chart.js legend since custom legend is present
+              },
+            },
+          },
+        });
+      
+        // Initialize the Bar Chart
+        const barCtx = document.getElementById('bar-chart').getContext('2d');
+        new Chart(barCtx, {
+          type: 'bar',
+          data: {
+            labels: ['Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [
+              {
+                label: 'Money Earned',
+                data: [10000, 15000, 20000, 40000, 30000, 35000, 45000], // Data points for the bar chart
+                backgroundColor: '#6366f1', // Bar color
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  callback: (value) => `$${value}`, // Format Y-axis values with a dollar sign
+                },
+              },
+            },
+            plugins: {
+              legend: {
+                display: false, // Hides legend as it's not required here
+              },
+            },
+          },
+        });
+      });
+      
+</script>
+</body>
+</html>

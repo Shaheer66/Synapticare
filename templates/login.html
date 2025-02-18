@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <title>login</title>
+</head>
+<body>
+    
+        <!-- Navbar -->
+        <nav class="navbar">
+          <img src="../static/images/synapticare.png" alt="Synapticare Logo" class="logo" />
+          <ul class="nav-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+          <button class="login-btn" id="signup-btn" >
+            Sign Up
+          </button>
+        </nav>
+        <div class="hero-section">
+            <h1 class="hero-heading">
+              Access Healthcare Tools & Support—<br />
+              <span>Log In to Continue.</span>
+            </h1>
+            <img src="../static/images/Group 1.png" alt="Group of People" class="hero-image" />
+            <div class="login-section">
+                <div class="login-box">
+                  <!-- Heading -->
+                  <h2 class="login-heading">
+                    Log in your Account<span class="highlight">!</span>
+                  </h2>
+              
+                  <!-- Login Form -->
+                  <form class="login-form">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" id="email" placeholder="Enter your email" class="form-input" required />
+              
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" class="form-input" required />
+              
+                    <a href="#" class="forgot-password">Forgot password?</a>
+              
+                    <!-- Sign In Button -->
+                    <button type="submit" class="signin-btn">Sign In</button>
+              
+                    <!-- Social Media Login -->
+                    <p class="social-text">Or sign in with</p>
+                    <div class="social-icons">
+                      <img src="../static/images/google.png" alt="Google" class="social-icon" />
+                      <img src="../static/images/facebook.png" alt="Facebook" class="social-icon" />
+                      <img src="../static/images/apple.png" alt="Apple" class="social-icon" />
+                    </div>
+              
+                    <!-- Sign Up Link -->
+                    <!-- <p class="signup-link">
+                      Don’t have an account? <a href="signup.html">Sign Up</a>
+                    </p> -->
+                    <p class="signup-link">
+                      Don’t have an account? <a href="#" id="open-modal">Sign Up</a>
+                    </p>
+                    
+                </form>
+                </div>
+            </div>
+        
+        </div>
+          
+
+        <!-- Modal Overlay -->
+<div id="signup-modal" class="modal-overlay" style="display: none;">
+  <div class="modal-content">
+    <img src="../static/images/synapticare.png" alt="">
+    <h2>Select Your Role</h2>
+    <p>Please choose how you'd like to sign up:</p>
+    <div class="modal-buttons">
+      <button class="role-button" id="normal-user">Normal User</button>
+      <button class="role-button" id="doctor-user">Doctor/Healthcare Professional</button>
+    </div>
+    <button class="close-modal" id="close-modal">×</button>
+  </div>
+</div>
+
+         
+          
+
+        <section class="footer">
+            <div class="footer-container">
+              <!-- Logo and Description -->
+              <div class="footer-logo">
+                <img src="../static/images/synapticare.png" alt="SynapticCare Logo" class="logo-img" />
+                <p class="footer-description">
+                  Lorem ipsum dolor sit amet consectetur. In diam nisl massa diam orci.
+                </p>
+              </div>
+          
+              <!-- Links: Product and Remaining -->
+              <div class="footer-links">
+                <!-- Product Links -->
+                <div class="link-column">
+                  <h4 class="link-heading">Product</h4>
+                  <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Updates</a></li>
+                  </ul>
+                </div>
+          
+                <!-- Remaining Links -->
+                <div class="link-column">
+                  <h4 class="link-heading">Remaining</h4>
+                  <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Support</a></li>
+                  </ul>
+                </div>
+              </div>
+          
+              <!-- Newsletter Subscription -->
+              <div class="newsletter">
+                <h4 class="newsletter-heading">Newsletter</h4>
+                <form class="newsletter-form">
+                  <input
+                    type="email"
+                    placeholder="example@synapticare.com"
+                    class="newsletter-input"
+                  />
+                  <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+              <p>© 2024, SC. All rights reserved.</p>
+            </div>
+        </section>
+        <script>
+          // JavaScript function to handle redirection
+          function redirectToSignup() {
+            window.location.href = "{{ url_for('signup') }}"; // Redirect to login.html
+          }
+        </script>
+</body>
+<script>
+  // Passing dynamic URLs from Flask to JavaScript
+  const signupUrl = "{{ url_for('signup') }}";
+  const doctorSignupUrl = "{{ url_for('doctor_signup') }}";
+</script>
+
+<!-- Link to the external JS file -->
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</html>

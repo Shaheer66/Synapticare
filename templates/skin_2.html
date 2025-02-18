@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verify your code and join the trusted medical community.">
+    <meta name="author" content="MUARSZ Tech Solutions">
+    <title>Symptom_Submission</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='css/skin_2.css') }}">
+   
+   
+</head>
+<body>
+    
+        <!-- Navbar -->
+        <nav class="navbar">
+          <img src="../static/images/synapticare.png" alt="Synapticare Logo" class="logo" />
+          <ul class="nav-links">
+            <li><a href="{{ url_for('patient_home') }}">Home</a></li>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+
+          </ul>
+          <img class="profile" src="../static/images/profile.png" alt="Profile">
+        </nav>
+        
+    
+  <main class="symptom-checker">
+    <!-- Main Heading -->
+    <h1 class="main-heading">
+      Based on what you shared here's what we are <span class="highlight"> predicting</span>
+    </h1>
+    
+    <!-- Sub-heading -->
+    <p class="subheading">
+        This is a preliminary diagnosis. Now Doctor will review and confirm the accuracy of these results.
+    </p>
+
+    <!-- Symptom Cards -->
+    <div class="symptom-cards">
+      
+      <div class="symptom-card">
+        <h2>Acne</h2>
+        <a href="#dummy" class="go-icon"><i class="fas fa-arrow-right"></i></a>
+        <p>HHHHSHS</p>
+      </div>
+    </div>
+    <div class="submit-button-container">
+        <button class="submit-btn" id="submit-btn">
+          Submit for Review
+        </button>
+      </div>
+      
+    </main>
+
+    <!-- Overlay Container -->
+<div id="overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <img src="../static/images/synapticare.png" alt="Synapticare Logo" class="overlay-logo">
+      <p class="overlay-message">
+        Thanks! A doctor will review your symptoms and confirm the diagnosis. You’ll be notified once it’s ready.
+      </p>
+      <button class="close-overlay" id="close-overlay">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+  
+  <section class="footer">
+    <div class="footer-container">
+      <!-- Logo and Description -->
+      <div class="footer-logo">
+        <img src="../static/images/synapticare.png" alt="SynapticCare Logo" class="logo-img" />
+        <p class="footer-description">
+          Lorem ipsum dolor sit amet consectetur. In diam nisl massa diam orci.
+        </p>
+      </div>
+  
+      <!-- Links: Product and Remaining -->
+      <div class="footer-links">
+        <!-- Product Links -->
+        <div class="link-column">
+          <h4 class="link-heading">Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Updates</a></li>
+          </ul>
+        </div>
+  
+        <!-- Remaining Links -->
+        <div class="link-column">
+          <h4 class="link-heading">Remaining</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Help Centre</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Newsletter Subscription -->
+      <div class="newsletter">
+        <h4 class="newsletter-heading">Newsletter</h4>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            placeholder="example@synapticare.com"
+            class="newsletter-input"
+          />
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© 2024, SC. All rights reserved.</p>
+    </div>
+</section>
+</body>
+<script src="{{ url_for('static', filename='js/skin_2.js') }}"></script>
+</html>

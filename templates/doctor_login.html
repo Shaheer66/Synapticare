@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verify your code and join the trusted medical community.">
+    <meta name="author" content="MUARSZ Tech Solutions">
+    <title>Verification Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/verify.css') }}">
+</head>
+<body>
+    
+        <!-- Navbar -->
+        <nav class="navbar">
+          <img src="./images/synapticare.png" alt="Synapticare Logo" class="logo" />
+          <ul class="nav-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+          <button class="login-btn" type="button">Login</button>
+        </nav>
+
+        <div class="hero-section">
+            <h1 class="hero-heading">
+                Become Part of a<br />
+                Trusted Medical<br />
+                <span>Community</span>
+            </h1>
+            <img src="./images/group 1.png" alt="Group of People" class="hero-image">
+        </div>
+    
+        <section class="verification-section">
+            <h2>join Us <span>!</span></h2>
+            <p>
+                Enter the passcode you just received on your email address ending with 
+                <strong>*******@gmail.com</strong>
+            </p>
+            <form class="verification-form">
+                <input type="text" maxlength="1" class="verification-box" pattern="\d*" inputmode="numeric">
+                <input type="text" maxlength="1" class="verification-box" pattern="\d*" inputmode="numeric">
+                <input type="text" maxlength="1" class="verification-box" pattern="\d*" inputmode="numeric">
+                <input type="text" maxlength="1" class="verification-box" pattern="\d*" inputmode="numeric">
+                <input type="text" maxlength="1" class="verification-box" pattern="\d*" inputmode="numeric">
+                <input type="text" maxlength="1" class="verification-box" pattern="\d*" inputmode="numeric">
+            </form>
+            <button type="submit" class="verify-button">Verify</button>
+            
+        </section>
+
+        <section class="footer">
+            <div class="footer-container">
+              <!-- Logo and Description -->
+              <div class="footer-logo">
+                <img src="./images/synapticare.png" alt="SynapticCare Logo" class="logo-img" />
+                <p class="footer-description">
+                  Lorem ipsum dolor sit amet consectetur. In diam nisl massa diam orci.
+                </p>
+              </div>
+          
+              <!-- Links: Product and Remaining -->
+              <div class="footer-links">
+                <!-- Product Links -->
+                <div class="link-column">
+                  <h4 class="link-heading">Product</h4>
+                  <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Updates</a></li>
+                  </ul>
+                </div>
+          
+                <!-- Remaining Links -->
+                <div class="link-column">
+                  <h4 class="link-heading">Remaining</h4>
+                  <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Support</a></li>
+                  </ul>
+                </div>
+              </div>
+          
+              <!-- Newsletter Subscription -->
+              <div class="newsletter">
+                <h4 class="newsletter-heading">Newsletter</h4>
+                <form class="newsletter-form">
+                  <input
+                    type="email"
+                    placeholder="example@synapticare.com"
+                    class="newsletter-input"
+                  />
+                  <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+              </div>
+            </div>
+
+          
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+              <p>© 2024, SC. All rights reserved.</p>
+            </div>
+        </section>
+
+
+        </body>
+        </html>
