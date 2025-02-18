@@ -1,0 +1,287 @@
+/* Add the background image to the body */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh; /* Full height */
+    background: url('../images/patientHomeBg.png') no-repeat center center fixed;
+    background-size: cover; 
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .nav img{
+    margin-left: 10px;
+  }
+  .profile {
+    padding: 10px 20px;
+    background-color: transparent;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+  
+  .profile:hover {
+    background-color: #eaeaea;
+    transform: scale(1.05);
+  }
+
+
+
+  /* Welcome Section */
+.welcome-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: none; /* Background is inherited from the body */
+}
+
+.welcome-section h1 {
+  color: #280D4A;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.welcome-section h2 {
+  font-size: 1.5rem;
+  color: #4B4B4B;
+  margin-bottom: 40px;
+}
+
+/* Modules Container */
+.modules {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Individual Module */
+.module {
+  background: #fff; /* Default white for Medicine */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Module Image */
+.module img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+/* Module Heading */
+.module h3 {
+  font-size: 1.2rem;
+  color: #280D4A;
+  margin-bottom: 10px;
+}
+
+/* Module Paragraph */
+.module p {
+  font-size: 0.95rem;
+  color: #4B4B4B;
+  line-height: 1.5;
+}
+
+/* Specific Module Colors */
+.module:nth-child(1) {
+  background: #fff; /* Medicine Alternatives */
+}
+
+.module:nth-child(2),
+.module:nth-child(3) {
+  background: #f0f0f0; /* Symptom Input and Skin Disease Prediction */
+}
+
+
+      /* Footer Base Styles */
+.footer {
+    background-color: #ececec;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    
+
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin-top: auto;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo and Description */
+  .footer-logo {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .logo-img {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555555;
+  }
+  
+  /* Links Section */
+  .footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    min-width: 250px;
+  }
+  
+  .link-column {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .link-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .link-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .link-column li {
+    margin-bottom: 8px;
+  }
+  
+  .link-column a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #333333;
+    transition: color 0.3s ease;
+  }
+  
+  .link-column a:hover {
+    color: #6c6bf4;
+  }
+  
+  /* Newsletter Section */
+  .newsletter {
+    flex: 1.5;
+    min-width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .newsletter-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .newsletter-btn {
+    padding: 10px 20px;
+    background-color: #6c6bf4;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-btn:hover {
+    background-color: #5b5af3;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888888;
+    margin-top: 30px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .link-column {
+      text-align: center;
+    }
+  
+    .newsletter-form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .newsletter-input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .newsletter-btn {
+      width: 100%;
+    }
+  }
+  
+  

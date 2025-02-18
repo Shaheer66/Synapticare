@@ -1,0 +1,573 @@
+/* Gradient Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #d776f2, #ee71bc, #fd6e95);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .navbar img{
+    margin-left: 10px;
+  }
+
+  .login-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+  
+  .login-btn:hover {
+    background-color: #eaeaea;
+    transform: scale(1.05);
+  }
+  
+/* Hero Section */
+.hero-section {
+    margin: 80px 20px 0 40px; /* Top margin for spacing, left margin for alignment */
+    display: flex;
+    flex-direction: column;
+    column-gap: 50px;
+    align-items: flex-start; /* Align items to the left */
+  }
+  
+  /* Heading Styling */
+  .hero-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Bold for emphasis */
+    font-size: 36px;
+    line-height: 1.4;
+    color: black;
+    margin-bottom: 80px; /* Space between heading and image */
+  }
+  
+  .hero-heading span {
+    color: #6c6bf4; /* Highlighted color for emphasis */
+  }
+  
+  /* Image Styling */
+  .hero-image {
+    width: 180px; /* Set appropriate size for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 100px;
+    margin-left: 10px; /* Slight left offset */
+    animation: fadeInUp 1s ease forwards; /* Subtle animation for entry */
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+ 
+/* Login Section */
+.login-section {
+    margin-left: 60%;
+    margin-top: -30%;
+    display: flex;
+    justify-content: flex-end; /* Position on the right */
+    align-items: center;
+    height: 100vh;
+    padding: 0 40px; /* Space from the right */
+    animation: slideIn 1s ease forwards;
+    
+  }
+  
+  /* Login Box */
+  .login-box {
+    background-color: #efefeff0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+  
+  }
+  
+  /* Login Heading */
+  .login-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .login-heading .highlight {
+    color: #6c6bf4; /* Highlight color for "!" */
+  }
+  
+  /* Form Styles */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    color: #555;
+  }
+  
+  .form-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .forgot-password {
+    font-size: 12px;
+    color: #6c6bf4;
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Sign In Button */
+  .signin-btn {
+    background-color: #6c6bf4;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signin-btn:hover {
+    background-color: #5a5ae3;
+  }
+  
+  /* Social Media Section */
+  .social-text {
+    margin: 20px 0 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Sign Up Link */
+  .signup-link {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #555;
+  }
+  
+  .signup-link a {
+    color: #6c6bf4;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animation */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+
+
+/* Responsive Design */
+
+/* Medium Devices (Tablets, 768px and up) */
+@media screen and (max-width: 1024px) {
+  .login-section {
+    margin-left: 50%;
+    margin-top: -20%;
+    padding: 0 20px;
+  }
+
+  .login-box {
+    width: 300px; /* Slightly narrower for medium screens */
+    padding: 20px;
+  }
+
+  .hero-heading {
+    font-size: 32px; /* Reduce heading size */
+  }
+
+  .hero-image {
+    width: 150px; /* Smaller image size for medium screens */
+  }
+}
+
+/* Small Devices (Phones, 768px and below) */
+@media screen and (max-width: 768px) {
+  .login-section {
+    margin-left: 10%; /* Center-align on small devices */
+    margin-top: 0;
+    padding: 20px 10px;
+    justify-content: center; /* Center content */
+    height: auto; /* Remove fixed height */
+  }
+
+  .login-box {
+    width: 100%; /* Full width for small screens */
+    max-width: 320px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .login-heading {
+    font-size: 20px; /* Smaller heading size */
+  }
+
+  .form-input {
+    font-size: 12px; /* Reduce input font size */
+  }
+
+  .signin-btn {
+    font-size: 14px; /* Adjust button font size */
+    padding: 8px;
+  }
+
+  .social-icons {
+    gap: 10px; /* Reduce spacing between icons */
+  }
+
+  .social-icon {
+    width: 35px; /* Smaller icons for small screens */
+    height: 35px;
+  }
+}
+
+
+/* Extra Small Devices (Phones, 375px and below) */
+@media screen and (max-width: 375px) {
+  .login-section {
+    padding: 10px;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align all content */
+  }
+
+  .login-box {
+    width: 90%; /* Occupy 90% of the screen width */
+    max-width: 320px; /* Keep it within a comfortable limit */
+  }
+
+  .login-heading {
+    font-size: 18px; /* Smaller heading size */
+  }
+
+  .form-label {
+    font-size: 12px; /* Adjust form label size */
+  }
+
+  .form-input {
+    padding: 8px; /* Reduce input padding */
+    font-size: 12px; /* Smaller input font size */
+  }
+
+  .signin-btn {
+    font-size: 14px; /* Reduce button font size */
+    padding: 8px;
+  }
+
+  .social-icons {
+    gap: 8px; /* Reduce spacing between icons */
+  }
+
+  .social-icon {
+    width: 30px; /* Smaller icon size */
+    height: 30px;
+  }
+
+  .signup-link {
+    font-size: 12px; /* Smaller font size for the sign-up link */
+    margin-top: 10px; /* Adjust spacing */
+  }
+}
+
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+/* Buttons inside Modal */
+.modal-buttons {
+  margin-top: 20px;
+}
+
+.role-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background 0.3s ease;
+}
+
+.role-button:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Close Button */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+
+  
+
+
+  /* Footer Base Styles */
+.footer {
+    background-color: #ececec;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    width: 100%;
+    position: relative;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo and Description */
+  .footer-logo {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .logo-img {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555555;
+  }
+  
+  /* Links Section */
+  .footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    min-width: 250px;
+  }
+  
+  .link-column {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .link-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .link-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .link-column li {
+    margin-bottom: 8px;
+  }
+  
+  .link-column a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #333333;
+    transition: color 0.3s ease;
+  }
+  
+  .link-column a:hover {
+    color: #6c6bf4;
+  }
+  
+  /* Newsletter Section */
+  .newsletter {
+    flex: 1.5;
+    min-width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .newsletter-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .newsletter-btn {
+    padding: 10px 20px;
+    background-color: #6c6bf4;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-btn:hover {
+    background-color: #5b5af3;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888888;
+    margin-top: 30px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .link-column {
+      text-align: center;
+    }
+  
+    .newsletter-form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .newsletter-input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .newsletter-btn {
+      width: 100%;
+    }
+  }
+  
+  
