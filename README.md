@@ -82,7 +82,7 @@ Go to db_connections.py in db_utils folder
 
  host="localhost",  
             user="root",  
-            password="Pakistan@1122",  
+            password="abc",  
             database="synapticare"  
 
 and replace this acording to your rest will remain same you just have to change password, password you will use for your sql that you will create while setting sql
