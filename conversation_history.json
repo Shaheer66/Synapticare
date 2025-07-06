@@ -1,0 +1,9 @@
+{
+    "conversation_history": [
+        {
+            "sender": "user",
+            "message": "fever"
+        }
+    ],
+    "heading": "Conversation with AI Doctor"
+}
