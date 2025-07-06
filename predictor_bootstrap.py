@@ -15,10 +15,10 @@ def bootstrap_symptom_predictor():
     try:
         symptom_predictor = SymptomPredictor()
         predictor_ready.set()
-        print("✅ SymptomPredictor loaded successfully.")
+        print(" SymptomPredictor loaded successfully.")
     except Exception as e:
         predictor_failed.set()
-        print(f"❌ SymptomPredictor failed to load: {e}")
+        print(f" SymptomPredictor failed to load: {e}")
 
 def handle_prediction( session_id, query: str):
     """
